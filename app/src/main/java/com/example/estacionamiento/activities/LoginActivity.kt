@@ -1,5 +1,5 @@
 package com.example.estacionamiento.activities
-
+import com.example.estacionamiento.entities.Usuario
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -18,14 +18,14 @@ class LoginActivity : AppCompatActivity() {
 
         binding.btnIngresar.setOnClickListener {
 
-            val email = binding.etEmail.text.toString()
+            val usuario = binding.etEmail.text.toString()
             val password = binding.etPassword.text.toString()
 
-            if(email == "admin" && password == "admin") {
+            if(usuario == "admin" && password == "admin") {
                val mainActivityIntent = Intent(this, MainActivity::class.java)
                 startActivity(mainActivityIntent)
             } else {
-                Toast.makeText(this, "Por favor ingrese valores correctos", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_LONG).show()
             }
         }
     }

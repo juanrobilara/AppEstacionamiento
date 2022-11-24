@@ -8,7 +8,7 @@ class UsuarioRepositorio {
 
     fun agregar(usuario: Usuario) {
         if(existe(usuario.nombre)){
-            
+
             error("No se puede agregar, el nombre ${usuario.nombreUsuario} ya está en uso")
         }
         usuarios.add(usuario)
