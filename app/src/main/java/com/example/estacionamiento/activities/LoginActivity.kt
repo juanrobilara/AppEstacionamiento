@@ -28,5 +28,10 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_LONG).show()
             }
         }
+
+        binding.btnRegister.setOnClickListener {
+            val registerActivityIntent = Intent(this, RegisterActivity::class.java)
+            startActivity(registerActivityIntent)
+        }
     }
 }
