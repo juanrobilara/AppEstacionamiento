@@ -59,25 +59,25 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextApellido" />
 
     <LinearLayout
-        android:layout_width="413dp"
-        android:layout_height="511dp"
-        android:layout_marginTop="32dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="407dp"
+        android:layout_height="286dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextUser"
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordReg"
         app:layout_constraintVertical_bias="1.0">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/buttonRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
             android:layout_margin="20dp"
             android:backgroundTint="@color/light_grey"
-            android:textColor="@color/black"
-            android:text="Registrar" />
+            android:padding="10dp"
+            android:text="Registrar"
+            android:textColor="@color/black" />
 
         <Space
             android:layout_width="match_parent"
@@ -88,9 +88,60 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:padding="10dp"
             android:backgroundTint="@color/red"
+            android:padding="10dp"
             android:text="Cancelar" />
     </LinearLayout>
+
+    <EditText
+        android:id="@+id/etPasswordReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:layout_margin="20dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:background="@color/light_grey"
+        android:hint="Contraseña"
+        android:padding="10dp"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUser" />
+
+    <EditText
+        android:id="@+id/editTextPatente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="32dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:background="@color/light_grey"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:hint="Patente del Vehiculo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordReg" />
+
+    <Spinner
+        android:id="@+id/spinnerVehiculos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/light_grey"
+        android:padding="10dp"
+        android:entries="@array/vehiculos"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPatente"
+
+        app:layout_constraintVertical_bias="0.227" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

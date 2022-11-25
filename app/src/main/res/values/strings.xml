@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Estacionamiento</string>
+
+    <string-array name="vehiculos">
+        <item>Ciclomotor</item>
+        <item>Auto</item>
+        <item>Pesado</item>
+    </string-array>
 </resources>

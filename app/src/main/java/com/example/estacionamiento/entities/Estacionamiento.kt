@@ -63,5 +63,13 @@ class Estacionamiento(val nombre: String, val tarifaBase: Double = 150.0) {
         return clientes.generarId();
     }
 
+    /*
+    fun registrarUsuario(nombreUsuario: String, password: String) {
+
+        usuarioNuevo = usuarios.crearUsuario(nombreUsuario, password)
+        usuarios.agregar(usuarioNuevo)
+    } */
+
+
 
 }

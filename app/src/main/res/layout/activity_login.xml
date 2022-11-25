@@ -29,7 +29,7 @@
         android:drawableLeft="@drawable/ic_baseline_person_24"/>
 
     <EditText
-        android:id="@+id/etPassword"
+        android:id="@+id/etPasswordReg"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -57,7 +57,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordReg"
         app:layout_constraintVertical_bias="0.159">
 
         <Button

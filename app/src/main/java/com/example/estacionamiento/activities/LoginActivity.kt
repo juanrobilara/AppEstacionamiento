@@ -1,5 +1,5 @@
 package com.example.estacionamiento.activities
-import com.example.estacionamiento.entities.Usuario
+import com.example.estacionamiento.entities.Estacionamiento
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -19,7 +19,7 @@ class LoginActivity : AppCompatActivity() {
         binding.btnIngresar.setOnClickListener {
 
             val usuario = binding.etEmail.text.toString()
-            val password = binding.etPassword.text.toString()
+            val password = binding.etPasswordReg.text.toString()
 
             if(usuario == "admin" && password == "admin") {
                val mainActivityIntent = Intent(this, MainActivity::class.java)

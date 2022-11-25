@@ -1,5 +1,6 @@
 package com.example.estacionamiento.repositories
 
+import com.example.estacionamiento.entities.Cliente
 import com.example.estacionamiento.entities.Usuario
 
 class UsuarioRepositorio {
@@ -7,7 +8,7 @@ class UsuarioRepositorio {
 
 
     fun agregar(usuario: Usuario) {
-        if(existe(usuario.nombre)){
+        if(existe(usuario.nombreUsuario)){
 
             error("No se puede agregar, el nombre ${usuario.nombreUsuario} ya está en uso")
         }
@@ -39,6 +40,20 @@ class UsuarioRepositorio {
         }
         return null
         //TODO: Completar
+    }
+
+    fun crearUsuario(nombreUsuario: String, password: String, cliente: Cliente): Usuario {
+        if (existe(nombreUsuario)) {
+
+            error("No se puede agregar, el nombre $nombreUsuario ya está en uso")
+        } else {
+            val usuario = Usuario(this.generarId(), nombreUsuario, password, cliente)
+            return usuario
+        }
+    }
+
+    private fun generarId(): Int {
+        return usuarios.size
     }
 
 }
