@@ -1,10 +1,10 @@
 package entidades
 
-import interfaz.estacionamiento
-import interfaz.iniciarMenu
-import repositorios.ClienteRepositorio
-import repositorios.TicketRepositorio
-import repositorios.UsuarioRepositorio
+//import interfaz.estacionamiento
+//import interfaz.iniciarMenu
+import com.example.estacionamiento.repositories.ClienteRepositorio
+import com.example.estacionamiento.repositories.TicketRepositorio
+import com.example.estacionamiento.repositories.UsuarioRepositorio
 import java.time.LocalDate
 import java.time.LocalTime
 import java.time.Period
