@@ -1,9 +1,9 @@
 package com.example.estacionamiento.entities
 
+
 data class Usuario(
-    val id: Long,
-    val nombre: String,
-    val apellido: String,
+    val id: Int,
+    val nombreUsuario: String,
     val password: String,
-    val nombreUsuario: String
+    val cliente : Cliente
 )

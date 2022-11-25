@@ -1,4 +1,4 @@
-package entidades
+package com.example.estacionamiento.entities
 
 import java.time.LocalDate
 import java.time.LocalTime

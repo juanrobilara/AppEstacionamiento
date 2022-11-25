@@ -12,7 +12,7 @@ class ClienteRepositorio {
         clientes.remove(cliente)
     }
 
-    fun obtenerPorId(id: Long): Cliente? {
+    fun obtenerPorId(id: Int): Cliente? {
         //TODO: Completar
         for (cliente in clientes) {
             if (cliente.id == id) {
@@ -21,6 +21,10 @@ class ClienteRepositorio {
         }
         return null
 
+    }
+
+    fun generarId(): Int {
+        return this.clientes.size
     }
 
     fun buscar(apellido: String, nombre: String): Cliente? {

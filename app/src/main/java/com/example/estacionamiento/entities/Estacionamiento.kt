@@ -1,10 +1,10 @@
-package entidades
-
+package com.example.estacionamiento.entities
 //import interfaz.estacionamiento
 //import interfaz.iniciarMenu
 import com.example.estacionamiento.repositories.ClienteRepositorio
 import com.example.estacionamiento.repositories.TicketRepositorio
 import com.example.estacionamiento.repositories.UsuarioRepositorio
+
 import java.time.LocalDate
 import java.time.LocalTime
 import java.time.Period
@@ -27,7 +27,7 @@ class Estacionamiento(val nombre: String, val tarifaBase: Double = 150.0) {
 
     fun crearTicket(cliente: Cliente, estadia: Int) {
         val montoBruto =
-            cliente.vehiculo.calcularMontoBruto(LocalTime.now(), LocalDate.now(), estadia, estacionamiento.tarifaBase)
+            cliente.vehiculo.calcularMontoBruto(LocalTime.now(), LocalDate.now(), estadia, this.tarifaBase)
         val montoFinal = aplicarBeneficio(cliente.fechaAlta, montoBruto)
         return if (cliente.saldo > montoFinal) {
             //Crear ticket
@@ -46,10 +46,10 @@ class Estacionamiento(val nombre: String, val tarifaBase: Double = 150.0) {
             ticketRepository.agregar(ticket)
             cliente.descontarSaldo(montoFinal)
             println("Ticket generado!")
-            iniciarMenu()
+            //iniciarMenu()
         } else {
             println("Saldo insuficiente!")
-            iniciarMenu()
+            //iniciarMenu()
         }
     }
 
